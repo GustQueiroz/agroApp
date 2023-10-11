@@ -1,0 +1,32 @@
+:root {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    background: #f6f9ff;
+    color: #666
+  }
+.form-control {
+    background-color: #e9e9e9;
+    border-color: #39ace55c;
+    border-width: 2px;
+}
+.input {
+    background-color: #e9e9e9;
+    border-color: #39ace55c;
+    border-width: 2px;
+}
+.centered {
+    display: flex;
+    justify-content: center;
+  }
+.text-center {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.submit-button {
+  margin-top: 30px;
+}
