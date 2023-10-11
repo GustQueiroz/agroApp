@@ -86,6 +86,7 @@ const FormAnnualCulture = () => {
             </div>
         </div>
         <div className="col-12"></div>
+        <div className="row g-3 container-2">
         <div className="col-12"></div>
         <div className="col-12">
             <label htmlFor="inputCivilState" className="form-label centered">Dados da Safra Prevista</label>
@@ -97,8 +98,6 @@ const FormAnnualCulture = () => {
             </select>
         </div>
         <div className="col-12"></div>
-
-        <div className="row g-3 container-2">
         <div className="col-12"></div>
         <div className='text-center'>
           <div className="col-8 text-center"><h6>Ano de previsão da colheita:</h6></div>

@@ -102,7 +102,8 @@ const FormPerennialCulture = () => {
             </div>
         </div>
         <div className="col-12"></div>
-        <div className="col-12"></div>
+        <div className="row g-3 container-2">
+        <div className='col-12'></div>
         <div className="col-12">
           <label htmlFor="inputDate" className="form-label centered"><h4>Histórico de safras anteriores - Área Renovada</h4></label>
         </div>
@@ -174,6 +175,8 @@ const FormPerennialCulture = () => {
             </select>
         </div>
         <div className='col-12'></div>
+        <div className='col-12'></div>
+        </div>
         <div className='col-12'></div>
         <div className="col-4">
           <label htmlFor="inputText" className="form-label centered">Receita estimada</label>
