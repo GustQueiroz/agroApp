@@ -53,9 +53,10 @@ const FormGeneralAgriculture = () => {
             <input type="text" className="form-control" id="inputText"/>
          </div>
          <div className="col-2"></div>
-         <div className="col-12 centered">Dados da Safra Prevista</div>
          <div className="col-12"></div>
+         <div className="row g-3 container-2">
          <div className="col-12"></div>
+         <div className="col-12 centered"><h6><strong>Dados da Safra Prevista</strong></h6></div>
          <div className="col-6">
             <label htmlFor="inputText" className="form-label centered">Forma de Cultivo</label>
             <select className="form-select input" id="inputText">
@@ -77,6 +78,9 @@ const FormGeneralAgriculture = () => {
          </div>
           <div className="col-12"></div>
           <div className="col-12"></div>
+          <div className="col-12"></div>
+          </div>
+          <div className="row g-3 container-3">
           <div className='text-center'>
           <div className="col-8 text-center"><h6>Ano predominante da colheita:</h6></div>
           <div className="col-4">
@@ -116,6 +120,9 @@ const FormGeneralAgriculture = () => {
                 <option value="">Sim</option>
                 <option value="">Não</option>
             </select>
+        </div>
+        <div className="col-12"></div>
+        <div className="col-12"></div>
         </div>
         <div className="col-12"></div>
         <div className="col-12"></div>
@@ -163,7 +170,8 @@ const FormGeneralAgriculture = () => {
             <label htmlFor="inputCivilState" className="form-label centered">Ano-Safra</label>
             <input type="text" className="form-control" id="inputText" />
           </div>
-        </div>
+        </div>           
+
         <div className="col-12 submit-button">
           <button type="submit" className="btn btn-primary">Salvar</button>
         </div>

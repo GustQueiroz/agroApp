@@ -38,9 +38,12 @@
   display: block;
 }
 .container-2 {
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
-  margin-top: 50px;
+  border-top: 1px solid #bebebe;
+  border-bottom: 1px solid #bebebe;
+  margin-top: 40px;
+}
+.container-3 {
+  border-bottom: 1px solid #bebebe;
 }
 .text-center {
   margin-top: 10px;
