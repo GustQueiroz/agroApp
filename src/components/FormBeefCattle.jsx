@@ -203,12 +203,12 @@ const FormBeefCattle = () => {
             <div className="col-2">
                 <label htmlFor="inputName" className="form-label centered">R$/Arroba Boi</label>
                 <input type="text" className="form-control centered" id="inputName" onInput={handleOnlyNumber}/>
-                <button type="text" className="btn-primary">Consulta @ Boi</button>
+                <button type="text" className="btn-primary bm-second">Consulta @ Boi</button>
             </div>
             <div className="col-2">
                 <label htmlFor="inputName" className="form-label centered">R$/Arroba Vaca</label>
                 <input type="text" className="form-control centered" id="inputName" onInput={handleOnlyNumber}/>
-                <button type="text" className="btn-primary">Consulta @ Vaca</button>
+                <button type="text" className="btn-primary bm-second">Consulta @ Vaca</button>
             </div>
             <div className="col-2">
                 <button type="text" className="btn btn-primary bm-primary">Gerar Evolução</button>
