@@ -6,6 +6,7 @@ import Producer from './screens/producer';
 import AnnualCulture from './screens/annualCulture';
 import PerennialCulture from './screens/perennialCulture';
 import GeneralAgriculture from './screens/generalAgriculture';
+import BeefCattle from './screens/beefCattle';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/cultura-anual" element={<AnnualCulture />} />
           <Route path="/cultura-perene" element={<PerennialCulture />} />
           <Route path="/agricultura-geral" element={<GeneralAgriculture />} />
+          <Route path="/pecuaria-de-corte" element={<BeefCattle />} />
         </Routes>
       </div>
     </Router>

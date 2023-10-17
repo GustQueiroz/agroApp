@@ -103,7 +103,7 @@ const FormGeneralAgriculture = () => {
           </div>
         </div>
         <div className='text-center'>
-        <div className="col-8 text-center"><h6>Nivel tenológico adotado para esta cultura:</h6></div>
+        <div className="col-8 text-center"><h6>Nivel tecnológico adotado para esta cultura:</h6></div>
             <label htmlFor="inputTexturaSolo" className="form-label"></label>
             <select className="form-select input" id="inputTexturaSolo">
                 <option value=""></option>

@@ -159,7 +159,7 @@ const FormProducer = () => {
         </div>
         <div className="col-1"></div>
         <div className="col-6">
-          <label htmlFor="inputAnnualBilling" className="form-label">Quanto desembolsa anualmente para manutenão familiar?</label>
+          <label htmlFor="inputAnnualBilling" className="form-label">Quanto desembolsa anualmente para manutenção familiar?</label>
           <CurrencyInput
         id="inputAnnualBilling"
         name="inputAnnualBilling"

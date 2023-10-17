@@ -11,6 +11,7 @@ function NavigationMenu() {
           <li><Link to="/cultura-anual">Cultura Anual</Link></li>
           <li><Link to="/cultura-perene">Cultura Perene</Link></li>
           <li><Link to="/agricultura-geral">Agricultura Geral</Link></li>
+          <li><Link to="/pecuaria-de-corte">Pecuária de Corte</Link></li>
         </ul>
       </nav>
     );
