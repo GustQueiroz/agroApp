@@ -2,8 +2,9 @@
   background-color: white;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   height: 100px;
+  font-size: 14px;
 }
 .navigationTab ul {
   display: flex;
@@ -11,4 +12,14 @@
 .navigationTab li {
   display: flex;
   padding: 20px;
+}
+
+@media (max-width: 990px) {
+  .navigationTab li {
+    padding: 8px;
+  }
+  .navigationTab {
+    width: 100%;
+    font-size: 12px;
+  }
 }
