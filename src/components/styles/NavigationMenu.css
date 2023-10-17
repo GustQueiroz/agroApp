@@ -1,14 +1,14 @@
 .navigationTab {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    height: 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100px;
 }
-.navigationTab ul{
-    display: flex;
+.navigationTab ul {
+  display: flex;
 }
-.navigationTab li{
-    display: flex;
-    padding: 20px;
+.navigationTab li {
+  display: flex;
+  padding: 20px;
 }
