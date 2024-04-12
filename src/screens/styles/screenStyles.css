@@ -43,3 +43,8 @@
   align-items: center;
   padding: 20px;
 }
+.link-p {
+  color: black;
+  font-size: 14px;
+  font-weight: 800;
+}

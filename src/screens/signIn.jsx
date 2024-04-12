@@ -1,18 +1,22 @@
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/screenStyles.css";
+
 const SignIn = () => {
   return (
     <>
-      <div>
-        <div>
-          <div>
+      <div className="row">
+        <div className="col-7">
+          <div className="col-3">
             <label className="form-label">Usuario</label>
             <input type="text" className="form-control" id="user"></input>
           </div>
-          <div>
+          <div className="col-3">
             <label className="form-label">Senha</label>
             <input type="text" className="form-control" id="password"></input>
           </div>
           <div>
-            <label className="">Esqueceu sua Senha?</label>
+            <p className="link-p">Esqueceu sua Senha?</p>
           </div>
         </div>
         <div></div>
