@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <div>
-        <NavigationMenu />
         <Routes>
           <Route path="/" element={<SignIn />} />
           <Route path="/cadastro-produtor" element={<Producer />} />
