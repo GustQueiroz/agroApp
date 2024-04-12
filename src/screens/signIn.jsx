@@ -5,7 +5,8 @@ import "./styles/screenStyles.css";
 const SignIn = () => {
   return (
     <>
-      <div className="row">
+      <div className="signIn-body row">
+        <div className="register-link-body col-5"></div>
         <div className="col-7">
           <div className="col-3">
             <label className="form-label">Usuario</label>
@@ -18,8 +19,12 @@ const SignIn = () => {
           <div>
             <p className="link-p">Esqueceu sua Senha?</p>
           </div>
+          <div className="col-12 submit-button">
+            <button type="submit" className="signIn-button">
+              Entrar
+            </button>
+          </div>
         </div>
-        <div></div>
       </div>
     </>
   );
