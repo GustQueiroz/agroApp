@@ -1,12 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavigationMenu from './components/NavigationMenu';
-import Property from './screens/property';
-import Producer from './screens/producer';
-import AnnualCulture from './screens/annualCulture';
-import PerennialCulture from './screens/perennialCulture';
-import GeneralAgriculture from './screens/generalAgriculture';
-import BeefCattle from './screens/beefCattle';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavigationMenu from "./components/NavigationMenu";
+import Property from "./screens/property";
+import Producer from "./screens/producer";
+import AnnualCulture from "./screens/annualCulture";
+import PerennialCulture from "./screens/perennialCulture";
+import GeneralAgriculture from "./screens/generalAgriculture";
+import BeefCattle from "./screens/beefCattle";
+import SignIn from "./screens/signIn";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div>
         <NavigationMenu />
         <Routes>
+          <Route path="/" element={<SignIn />} />
           <Route path="/cadastro-produtor" element={<Producer />} />
           <Route path="/cadastro-propriedade" element={<Property />} />
           <Route path="/cultura-anual" element={<AnnualCulture />} />
@@ -27,4 +29,3 @@ function App() {
 }
 
 export default App;
-
