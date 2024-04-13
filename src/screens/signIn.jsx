@@ -6,7 +6,7 @@ const SignIn = () => {
   return (
     <>
       <div className="signIn-body row">
-        <div className="register-link-body col-4">a</div>
+        <div className="register-link-body col-5"></div>
         <div className="col-7">
           <div className="col-3">
             <label className="form-label">Usuario</label>

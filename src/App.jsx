@@ -8,6 +8,7 @@ import PerennialCulture from "./screens/perennialCulture";
 import GeneralAgriculture from "./screens/generalAgriculture";
 import BeefCattle from "./screens/beefCattle";
 import SignIn from "./screens/signIn";
+import ProducerTable from "./screens/producerTable";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<SignIn />} />
           <Route path="/cadastro-produtor" element={<Producer />} />
+          <Route path="/grid-produtor" element={<ProducerTable />} />
           <Route path="/cadastro-propriedade" element={<Property />} />
           <Route path="/cultura-anual" element={<AnnualCulture />} />
           <Route path="/cultura-perene" element={<PerennialCulture />} />

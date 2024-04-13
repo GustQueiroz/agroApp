@@ -1,0 +1,16 @@
+.edit-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.delete-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.edit-icon:hover {
+  color: rgb(0, 128, 255);
+}
+.delete-icon:hover {
+  color: rgb(199, 41, 41);
+}
