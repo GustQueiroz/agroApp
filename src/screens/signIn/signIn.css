@@ -1,0 +1,62 @@
+.signIn-button {
+  margin-left: 6px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(28, 197, 28);
+  color: #fff;
+  font-weight: 800;
+  width: 260px;
+  height: 40px;
+}
+.signIn-button:hover {
+  background-color: rgb(27, 173, 27);
+}
+.signIn-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+}
+.register-link-body {
+  background-color: #39876c;
+}
+.logoDexSignIn {
+  margin-left: -15px;
+  width: 300px;
+  height: 300px;
+}
+.signIn-password-text {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .logoDexSignIn {
+    margin-left: 45px;
+  }
+  .signIn-password-text {
+    margin-left: 20px;
+  }
+  .signIn-user-text {
+    margin-left: 20px;
+  }
+  .forgot-text {
+    margin-left: 25px;
+  }
+  .signIn-button {
+    margin-left: 60px;
+  }
+}
+.mobile-register-link {
+  display: none;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+@media (max-width: 768px) {
+  .mobile-register-link {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+}

@@ -1,4 +1,4 @@
-.property-form {
+.perennialCulture-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,13 +11,13 @@
 }
 
 @media (max-width: 990px) {
-  .producer-form {
+  .perennialCulture-form {
     width: 75%;
     padding: 30px;
   }
 }
 @media (max-width: 768px) {
-  .producer-form {
+  .perennialCulture-form {
     width: 95%;
     padding: 30px;
   }

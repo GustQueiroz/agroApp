@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FormProducer from "../../components/FormProducer";
 import NavigationMenu from "../../components/NavigationMenu";
 import "../styles/screenStyles.css";
+import "./producer.css";
 
 const Producer = () => {
   return (

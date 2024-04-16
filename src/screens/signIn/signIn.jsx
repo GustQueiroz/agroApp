@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import LogoDex from "../../imgs/dex-logo.png";
 import { Link } from "react-router-dom";
 import "../styles/screenStyles.css";
+import "./signIn.css";
 
 const SignIn = () => {
   return (

@@ -3,12 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FormPerennialCulture from "../../components/FormPerennialCulture";
 import NavigationMenu from "../../components/NavigationMenu";
 import "../styles/screenStyles.css";
+import "./perennialCulture.css";
 
 const PerennialCulture = () => {
   return (
     <div className="screen-body">
       <NavigationMenu />
-      <div className="producer-form">
+      <div className="perennialCulture-form">
         <h3 className="form-title">Ficha de Informações - Produtor Rural </h3>
         <h5 className="form-title">Atividade Rural - Cultura Perene</h5>
         <FormPerennialCulture />

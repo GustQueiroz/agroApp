@@ -1,7 +1,8 @@
 import React from "react";
 import ProducerGrid from "../../components/ProducerGrid";
-import "../styles/screenStyles.css";
 import NavigationMenu from "../../components/NavigationMenu";
+import "../styles/screenStyles.css";
+import "./producerTable.css";
 
 const ProducerTable = () => {
   return (
