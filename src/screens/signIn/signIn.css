@@ -1,15 +1,15 @@
 .signIn-button {
-  margin-left: 6px;
+  margin-left: 3px;
   border-radius: 20px;
   border: none;
-  background-color: rgb(26, 181, 26);
+  background-color: #3b8d70;
   color: #fff;
   font-weight: 800;
   width: 300px;
   height: 40px;
 }
 .signIn-button:hover {
-  background-color: rgb(25, 159, 25);
+  background-color: #347c63;
 }
 .signIn-body {
   display: flex;
@@ -40,6 +40,8 @@
 }
 .register-button:hover {
   background-color: #3b8d70;
+  width: 210px;
+  height: 55px;
   border: 1px solid #e6e6e6;
 }
 .register-title {
