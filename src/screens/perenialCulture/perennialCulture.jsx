@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormPerennialCulture from "../../components/FormPerennialCulture";
-import NavigationMenu from "../../components/NavigationMenu";
+import FormPerennialCulture from "../../components/Forms/FormPerennialCulture";
+import NavigationMenu from "../../components/NavigationMenu/NavigationMenu.jsx";
 import "../styles/screenStyles.css";
 import "./perennialCulture.css";
 

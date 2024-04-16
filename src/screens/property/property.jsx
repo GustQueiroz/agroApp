@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormProperty from "../../components/FormProperty";
-import NavigationMenu from "../../components/NavigationMenu";
+import FormProperty from "../../components/Forms/FormProperty";
+import NavigationMenu from "../../components/NavigationMenu/NavigationMenu.jsx";
 import "../styles/screenStyles.css";
 import "./property.css";
 

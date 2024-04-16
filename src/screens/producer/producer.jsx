@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormProducer from "../../components/FormProducer";
-import NavigationMenu from "../../components/NavigationMenu";
+import FormProducer from "../../components/Forms/FormProducer";
+import NavigationMenu from "../../components/NavigationMenu/NavigationMenu.jsx";
 import "../styles/screenStyles.css";
 import "./producer.css";
 

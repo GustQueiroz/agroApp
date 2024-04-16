@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormGeneralAgriculture from "../../components/FormGeneralAgriculture";
-import NavigationMenu from "../../components/NavigationMenu";
+import FormGeneralAgriculture from "../../components/Forms/FormGeneralAgriculture";
+import NavigationMenu from "../../components/NavigationMenu/NavigationMenu.jsx";
 import "../styles/screenStyles.css";
 import "./generalAgriculture.css";
 

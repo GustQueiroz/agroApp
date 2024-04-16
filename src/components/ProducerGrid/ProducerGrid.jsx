@@ -1,6 +1,6 @@
 import React from "react";
 import { MdDelete, MdEdit } from "react-icons/md";
-import "./styles/TableStyles.css";
+import "./TableStyles.css";
 
 const ProducerGrid = () => {
   return (

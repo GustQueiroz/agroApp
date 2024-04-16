@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styles/NavigationMenu.css";
+import "./NavigationMenu.css";
 
 function NavigationMenu() {
   return (

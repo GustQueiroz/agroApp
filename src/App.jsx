@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavigationMenu from "./components/NavigationMenu";
 import Property from "./screens/property/property";
 import Producer from "./screens/producer/producer";
 import AnnualCulture from "./screens/annualCulture/annualCulture";

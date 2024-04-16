@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormAnnualCulture from "../../components/FormAnnualCulture";
-import NavigationMenu from "../../components/NavigationMenu";
+import FormAnnualCulture from "../../components/Forms/FormAnnualCulture";
+import NavigationMenu from "../../components/NavigationMenu/NavigationMenu.jsx";
 import "../styles/screenStyles.css";
 import "./annualCulture.css";
 

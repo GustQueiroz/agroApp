@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormBeefCattle from "../../components/FormBeefCattle";
-import NavigationMenu from "../../components/NavigationMenu";
+import FormBeefCattle from "../../components/Forms/FormBeefCattle";
+import NavigationMenu from "../../components/NavigationMenu/NavigationMenu.jsx";
 import "../styles/screenStyles.css";
 import "./beefCattle.css";
 
