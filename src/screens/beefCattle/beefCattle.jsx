@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormBeefCattle from "../components/FormBeefCattle";
-import NavigationMenu from "../components/NavigationMenu";
-import "./styles/screenStyles.css";
+import FormBeefCattle from "../../components/FormBeefCattle";
+import NavigationMenu from "../../components/NavigationMenu";
+import "../styles/screenStyles.css";
 
 const BeefCattle = () => {
   return (

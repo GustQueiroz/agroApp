@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormGeneralAgriculture from "../components/FormGeneralAgriculture";
-import NavigationMenu from "../components/NavigationMenu";
-import "./styles/screenStyles.css";
+import FormGeneralAgriculture from "../../components/FormGeneralAgriculture";
+import NavigationMenu from "../../components/NavigationMenu";
+import "../styles/screenStyles.css";
 
 const GeneralAgriculture = () => {
   return (

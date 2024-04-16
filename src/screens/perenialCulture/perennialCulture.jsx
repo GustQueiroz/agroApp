@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormPerennialCulture from "../components/FormPerennialCulture";
-import NavigationMenu from "../components/NavigationMenu";
-import "./styles/screenStyles.css";
+import FormPerennialCulture from "../../components/FormPerennialCulture";
+import NavigationMenu from "../../components/NavigationMenu";
+import "../styles/screenStyles.css";
 
 const PerennialCulture = () => {
   return (

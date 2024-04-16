@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import LogoDex from "../imgs/dex-logo.png";
+import LogoDex from "../../imgs/dex-logo.png";
 import { Link } from "react-router-dom";
-import "./styles/screenStyles.css";
+import "../styles/screenStyles.css";
 
 const SignIn = () => {
   return (

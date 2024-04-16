@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormProperty from "../components/FormProperty";
-import NavigationMenu from "../components/NavigationMenu";
-import "./styles/screenStyles.css";
+import FormProperty from "../../components/FormProperty";
+import NavigationMenu from "../../components/NavigationMenu";
+import "../styles/screenStyles.css";
 
 const Property = () => {
   return (

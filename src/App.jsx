@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavigationMenu from "./components/NavigationMenu";
-import Property from "./screens/property";
-import Producer from "./screens/producer";
-import AnnualCulture from "./screens/annualCulture";
-import PerennialCulture from "./screens/perennialCulture";
-import GeneralAgriculture from "./screens/generalAgriculture";
-import BeefCattle from "./screens/beefCattle";
-import SignIn from "./screens/signIn";
-import ProducerTable from "./screens/producerTable";
-import Register from "./screens/register";
+import Property from "./screens/property/property";
+import Producer from "./screens/producer/producer";
+import AnnualCulture from "./screens/annualCulture/annualCulture";
+import PerennialCulture from "./screens/perenialCulture/perennialCulture";
+import GeneralAgriculture from "./screens/generalAgriculture/generalAgriculture";
+import BeefCattle from "./screens/beefCattle/beefCattle";
+import SignIn from "./screens/signIn/signIn";
+import ProducerTable from "./screens/producerTable/producerTable";
+import Register from "./screens/register/register";
 
 function App() {
   return (

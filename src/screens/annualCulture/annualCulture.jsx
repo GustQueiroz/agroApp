@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FormAnnualCulture from "../components/FormAnnualCulture";
-import NavigationMenu from "../components/NavigationMenu";
-import "./styles/screenStyles.css";
+import FormAnnualCulture from "../../components/FormAnnualCulture";
+import NavigationMenu from "../../components/NavigationMenu";
+import "../styles/screenStyles.css";
 
 const AnnualCulture = () => {
   return (
