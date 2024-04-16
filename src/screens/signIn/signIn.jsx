@@ -9,7 +9,17 @@ const SignIn = () => {
   return (
     <>
       <div className="signIn-body row">
-        <div className="register-link-body col-xl-6 col-1"></div>
+        <div className="register-link-body col-xl-6 col-1">
+          <h1 className="register-title">É NOVO POR AQUI?</h1>
+          <p className="register-text">
+            CRIE SUA CONTA E CONHEÇA NOSSOS PLANOS
+          </p>
+          <Link to="/register">
+            <button type="submit" className="register-button">
+              Cadastre-se
+            </button>
+          </Link>
+        </div>
         <div className="space col-xl-2 col-1"></div>
         <div className="col-xl-4 col-12">
           <img src={LogoDex} className="logoDexSignIn" />
