@@ -9,14 +9,15 @@ const SignIn = () => {
   return (
     <>
       <div className="signIn-body row">
-        <div className="register-link-body col-xl-5"></div>
-        <div className="col-xl-7">
+        <div className="register-link-body col-xl-6 col-1"></div>
+        <div className="space col-xl-2 col-1"></div>
+        <div className="col-xl-4 col-12">
           <img src={LogoDex} className="logoDexSignIn" />
-          <div className="col-xl-3 signIn-user-text">
+          <div className="col-xl-6 signIn-user-text">
             <label className="form-label">Usuario</label>
             <input type="text" className="form-control" id="user"></input>
           </div>
-          <div className="col-xl-3 signIn-password-text">
+          <div className="col-xl-6 signIn-password-text">
             <label className="form-label">Senha</label>
             <input type="text" className="form-control" id="password"></input>
           </div>

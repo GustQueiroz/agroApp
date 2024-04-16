@@ -1,15 +1,15 @@
 .signIn-button {
   margin-left: 6px;
-  border-radius: 12px;
+  border-radius: 20px;
   border: none;
-  background-color: rgb(28, 197, 28);
+  background-color: rgb(26, 181, 26);
   color: #fff;
   font-weight: 800;
-  width: 260px;
+  width: 300px;
   height: 40px;
 }
 .signIn-button:hover {
-  background-color: rgb(27, 173, 27);
+  background-color: rgb(25, 159, 25);
 }
 .signIn-body {
   display: flex;
@@ -18,13 +18,14 @@
   background-color: white;
   width: 100%;
   height: 100%;
-  margin-top: 100px;
 }
 .register-link-body {
-  background-color: #39876c;
+  height: 100vh;
+  background-color: #3e9577;
+  opacity: 80%;
 }
 .logoDexSignIn {
-  margin-left: -15px;
+  margin-left: 10px;
   width: 300px;
   height: 300px;
 }
@@ -34,6 +35,7 @@
 @media (max-width: 768px) {
   .logoDexSignIn {
     margin-left: 45px;
+    margin-top: 50px;
   }
   .signIn-password-text {
     margin-left: 20px;
@@ -46,6 +48,7 @@
   }
   .signIn-button {
     margin-left: 60px;
+    width: 260px;
   }
 }
 .mobile-register-link {
@@ -58,5 +61,8 @@
     display: flex;
     margin-top: 50px;
     margin-left: 100px;
+  }
+  .register-link-body {
+    display: none;
   }
 }
