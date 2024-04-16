@@ -29,6 +29,11 @@ const SignIn = () => {
               </button>
             </Link>
           </div>
+          <div className="col-xl-12 mobile-register-link">
+            <Link to="/registro">
+              <p>Não tem conta? Cadastre-se</p>
+            </Link>
+          </div>
         </div>
       </div>
     </>

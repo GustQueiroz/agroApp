@@ -9,6 +9,7 @@ import GeneralAgriculture from "./screens/generalAgriculture";
 import BeefCattle from "./screens/beefCattle";
 import SignIn from "./screens/signIn";
 import ProducerTable from "./screens/producerTable";
+import Register from "./screens/register";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<SignIn />} />
+          <Route path="/registro" element={<Register />} />
           <Route path="/cadastro-produtor" element={<Producer />} />
           <Route path="/grid-produtor" element={<ProducerTable />} />
           <Route path="/cadastro-propriedade" element={<Property />} />
