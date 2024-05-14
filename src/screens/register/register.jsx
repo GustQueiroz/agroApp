@@ -8,20 +8,20 @@ const Register = () => {
   return (
     <>
       <div>
-        <label>Nome Completo</label>
-        <input></input>
+        <label className="form-label">Nome Completo</label>
+        <input type="text" className="form-control" id="user"></input>
       </div>
       <div>
-        <label>Email</label>
-        <input></input>
+        <label className="form-label">Email</label>
+        <input type="text" className="form-control" id="email"></input>
       </div>
       <div>
-        <label>Senha</label>
-        <input></input>
+        <label className="form-label">Senha</label>
+        <input type="text" className="form-control" id="password"></input>
       </div>
       <div>
-        <label>Repetir Senha</label>
-        <input></input>
+        <label className="form-label">Repetir Senha</label>
+        <input type="text" className="form-control" id="password"></input>
       </div>
     </>
   );
