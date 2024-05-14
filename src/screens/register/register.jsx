@@ -7,7 +7,22 @@ import "./register.css";
 const Register = () => {
   return (
     <>
-      <div></div>
+      <div>
+        <label>Nome Completo</label>
+        <input></input>
+      </div>
+      <div>
+        <label>Email</label>
+        <input></input>
+      </div>
+      <div>
+        <label>Senha</label>
+        <input></input>
+      </div>
+      <div>
+        <label>Repetir Senha</label>
+        <input></input>
+      </div>
     </>
   );
 };
