@@ -14,7 +14,7 @@ const SignIn = () => {
           <p className="register-text">
             CRIE SUA CONTA E CONHEÇA NOSSOS PLANOS
           </p>
-          <Link to="/register">
+          <Link to="/registro">
             <button type="submit" className="register-button">
               Cadastre-se
             </button>

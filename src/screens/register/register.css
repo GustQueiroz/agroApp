@@ -1,0 +1,26 @@
+.register-body {
+  margin-left: 160px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-submit-button {
+  margin-left: 5px;
+  border-radius: 20px;
+  border: none;
+  background-color: #3b8d70;
+  color: #fff;
+  font-weight: 800;
+  width: 380px;
+  height: 40px;
+}
+.register-submit-button:hover {
+  background-color: #347c63;
+}
+.logoDexRegister {
+  margin-left: 50px;
+  width: 300px;
+  height: 300px;
+}
