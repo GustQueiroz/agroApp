@@ -9,15 +9,40 @@ import "./signIn.css";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async (event) => {
     event.preventDefault();
+    let valid = true;
+
+    if (!email) {
+      setEmailError("Por favor, digite um email válido.");
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      setEmailError("Por favor, digite um email no formato correto.");
+      valid = false;
+    } else {
+      setEmailError("");
+    }
+
+    if (!password) {
+      setPasswordError("Por favor, digite uma senha válida.");
+      valid = false;
+    } else {
+      setPasswordError("");
+    }
+
+    if (!valid) {
+      return;
+    }
+
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_API_URL}/api/auth`,
         {
-          email: email.toLocaleLowerCase(),
+          email: email.toLowerCase(),
           password: password,
         }
       );
@@ -61,8 +86,12 @@ const SignIn = () => {
                 className="form-control"
                 id="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  if (e.target.value) setEmailError("");
+                }}
               />
+              {emailError && <p className="text-danger">{emailError}</p>}
             </div>
             <div className="col-xl-6 signIn-password-text">
               <label className="form-label">Senha</label>
@@ -71,8 +100,12 @@ const SignIn = () => {
                 className="form-control"
                 id="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  if (e.target.value) setPasswordError("");
+                }}
               />
+              {passwordError && <p className="text-danger">{passwordError}</p>}
             </div>
             <div className="forgot-text">
               <p className="link-p">Esqueceu sua Senha?</p>
