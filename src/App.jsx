@@ -9,6 +9,7 @@ import BeefCattle from "./screens/beefCattle/beefCattle";
 import SignIn from "./screens/signIn/signIn";
 import ProducerTable from "./screens/producerTable/producerTable";
 import Register from "./screens/register/register";
+import Home from "./screens/home/home";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<SignIn />} />
           <Route path="/registro" element={<Register />} />
+          <Route path="/inicio" element={<Home />} />
           <Route path="/cadastro-produtor" element={<Producer />} />
           <Route path="/grid-produtor" element={<ProducerTable />} />
           <Route path="/cadastro-propriedade" element={<Property />} />

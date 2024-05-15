@@ -27,6 +27,12 @@ function NavigationMenu() {
         <li>
           <Link to="/grid-produtor">Tabela Produtores</Link>
         </li>
+        <li>
+          <Link to="/inicio">Início</Link>
+        </li>
+        <li>
+          <Link to="/">Sair</Link>
+        </li>
       </ul>
     </nav>
   );
