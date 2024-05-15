@@ -24,15 +24,21 @@ const ProducerGrid = () => {
             <td>
               <input className="form-control"></input>
             </td>
-            <td></td>
-            <td></td>
             <td>
               <input className="form-control"></input>
             </td>
             <td>
               <input className="form-control"></input>
             </td>
-            <td></td>
+            <td>
+              <input className="form-control"></input>
+            </td>
+            <td>
+              <input className="form-control"></input>
+            </td>
+            <td>
+              <input className="form-control"></input>
+            </td>
             <td></td>
           </tr>
           <tr>

@@ -31,6 +31,11 @@ const Register = () => {
             Registrar-se
           </button>
         </div>
+        <div className="col-xl-12 return-link">
+          <Link to="/">
+            <p>Já possui conta? Efetue Login</p>
+          </Link>
+        </div>
       </div>
     </div>
   );
