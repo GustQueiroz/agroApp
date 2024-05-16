@@ -1,11 +1,13 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import InputMask from "react-input-mask";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/FormStyles.css";
 import CurrencyInput from "react-currency-input-field";
+import axios from "axios";
 
 const FormProducer = () => {
   const [civilState, setCivilState] = useState("");
+  const [states, setStates] = useState([]);
   const [marriageRegime, setMarriageRegime] = useState("");
   const [cpfConjuge, setCpfConjuge] = useState("");
   const [formData, setFormData] = useState({
@@ -34,6 +36,20 @@ const FormProducer = () => {
     isAcceptedTerm: false,
   });
 
+  useEffect(() => {
+    const fetchStates = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_URL}/api/addresses/states`
+        );
+        setStates(response.data);
+      } catch (error) {
+        console.error("Error fetching states:", error);
+      }
+    };
+    fetchStates();
+  }, []);
+
   const handleOnlyNumber = (e) => {
     const numericValue = e.target.value.replace(/\D/g, "");
     if (numericValue.length > 2) {
@@ -59,6 +75,23 @@ const FormProducer = () => {
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/producers`,
+        formData
+      );
+      if (response.status === 200) {
+        console.log("Producer created successfully:", response.data);
+      } else {
+        console.error("Error creating producer:", response.data);
+      }
+    } catch (error) {
+      console.error("Error creating producer:", error);
+    }
+  };
+
   return (
     <div>
       <div>
@@ -69,7 +102,12 @@ const FormProducer = () => {
             <label htmlFor="inputName" className="form-label">
               Nome Produtor Rural
             </label>
-            <input type="text" className="form-control" id="inputName" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputName"
+              value={formData.fullName}
+            />
           </div>
           <div className="col-1"></div>
           <div className="col-lg-3 col-sm-12">
@@ -80,6 +118,7 @@ const FormProducer = () => {
               mask="999.999.999-99"
               type="text"
               className="form-control"
+              value={formData.cpf}
               id="inputCPF"
             />
           </div>
@@ -90,7 +129,7 @@ const FormProducer = () => {
             <select
               className="form-select input"
               id="inputCivilState"
-              value={civilState}
+              value={formData.civilStatus}
               onChange={handleCivilStateChange}
             >
               <option value="">Estado Civil</option>
@@ -109,7 +148,7 @@ const FormProducer = () => {
             <select
               className="form-select input"
               id="inputMarriage"
-              value={marriageRegime}
+              value={formData.marriageRegime}
               disabled={
                 civilState === "solteiro" ||
                 civilState === "divorciado" ||
@@ -122,18 +161,10 @@ const FormProducer = () => {
                 civilState !== "divorciado" &&
                 civilState !== "" && (
                   <>
-                    <option value="comunhao-parcial">
-                      Comunhão Parcial de Bens
-                    </option>
-                    <option value="comunhao-universal">
-                      Comunhão Universal de Bens
-                    </option>
-                    <option value="separacao-obrigatoria">
-                      Separação Obrigatória de Bens
-                    </option>
-                    <option value="separacao-total">
-                      Separação Total de Bens
-                    </option>
+                    <option value="1">Comunhão Parcial de Bens</option>
+                    <option value="2">Comunhão Universal de Bens</option>
+                    <option value="3">Separação Obrigatória de Bens</option>
+                    <option value="4">Separação Total de Bens</option>
                   </>
                 )}
             </select>
@@ -148,7 +179,7 @@ const FormProducer = () => {
               type="text"
               className="form-control"
               id="inputCPF"
-              value={cpfConjuge}
+              value={formData.partnerCpf}
               onChange={(e) => setCpfConjuge(e.target.value)}
               disabled={
                 civilState === "solteiro" ||
@@ -165,6 +196,7 @@ const FormProducer = () => {
               mask="(99) 99999-9999"
               type="text"
               className="form-control"
+              value={formData.phoneNumber}
               id="inputPhone"
             />
           </div>
@@ -172,7 +204,12 @@ const FormProducer = () => {
             <label htmlFor="inputEmail" className="form-label">
               Email
             </label>
-            <input type="text" className="form-control" id="inputEmail" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputEmail"
+              value={formData.email}
+            />
           </div>
           <div className="col-lg-2">
             <label htmlFor="inputExperience" className="form-label">
@@ -183,6 +220,7 @@ const FormProducer = () => {
               className="form-control"
               id="inputExperience"
               maxLength={2}
+              value={formData.timeExperience}
               onInput={handleOnlyNumber}
             />
           </div>
@@ -200,6 +238,7 @@ const FormProducer = () => {
               groupSeparator="."
               allowNegativeValue={false}
               decimalsLimit={2}
+              value={formData.invoicingPerYear}
               onValueChange={(value, name) => {}}
             />
           </div>
@@ -207,22 +246,30 @@ const FormProducer = () => {
             <label htmlFor="inputProducerProfile" className="form-label">
               Perfil do Produtor
             </label>
-            <select className="form-select input" id="inputProducerProfile">
+            <select
+              className="form-select input"
+              id="inputProducerProfile"
+              value={formData.profile}
+            >
               <option value="">Perfil do Produtor</option>
-              <option value="demais">Demais</option>
-              <option value="pronaf">PRONAF</option>
-              <option value="pronamp">PRONAMP</option>
+              <option value="1">Demais</option>
+              <option value="2">PRONAF</option>
+              <option value="3">PRONAMP</option>
             </select>
           </div>
           <div className="col-lg-5 col-sm-12">
             <label htmlFor="inputProducerProfile" className="form-label">
               Possui Assistência Técnica Agropecuária?
             </label>
-            <select className="form-select input" id="inputProducerProfile">
-              <option value="semAssistencia">Não possui</option>
-              <option value="contratada">Sim: Contratada</option>
-              <option value="estadual">Sim: Órgão Estadual</option>
-              <option value="propria">Sim: Própria</option>
+            <select
+              className="form-select input"
+              id="inputProducerProfile"
+              value={formData.agriculturalTechnicalAssistance}
+            >
+              <option value="1">Não possui</option>
+              <option value="2">Sim: Contratada</option>
+              <option value="3">Sim: Órgão Estadual</option>
+              <option value="4">Sim: Própria</option>
             </select>
           </div>
           <div className="col-1"></div>
@@ -240,6 +287,7 @@ const FormProducer = () => {
               groupSeparator="."
               allowNegativeValue={false}
               decimalsLimit={2}
+              value={formData.maintenanceFamilyPerYear}
               onValueChange={(value, name) => {}}
             />
           </div>
@@ -263,6 +311,7 @@ const FormProducer = () => {
                 groupSeparator="."
                 allowNegativeValue={false}
                 decimalsLimit={2}
+                value={formData.supplierDebts}
                 onValueChange={(value, name) => {}}
               />
             </div>
@@ -279,6 +328,7 @@ const FormProducer = () => {
                 decimalSeparator=","
                 groupSeparator="."
                 allowNegativeValue={false}
+                value={formData.normalFundingFromOtherFinancialInstitutions}
                 decimalsLimit={2}
                 onValueChange={(value, name) => {}}
               />
@@ -292,7 +342,7 @@ const FormProducer = () => {
                 name="inputAnnualBilling"
                 className="form-control"
                 placeholder="R$0,00"
-                r
+                value={formData.extendFundingFromOtherFinancialInstitutions}
                 prefix="R$"
                 decimalSeparator=","
                 groupSeparator="."
@@ -311,6 +361,7 @@ const FormProducer = () => {
                 className="form-control"
                 placeholder="R$0,00"
                 prefix="R$"
+                value={formData.investmentInOtherFinancialInstitutions}
                 decimalSeparator=","
                 groupSeparator="."
                 allowNegativeValue={false}
@@ -329,7 +380,12 @@ const FormProducer = () => {
             <label htmlFor="inputStreet" className="form-label">
               Logradouro
             </label>
-            <input type="text" className="form-control" id="inputStreet" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputStreet"
+              value={formData.street}
+            />
           </div>
           <div className="col-lg-2 col-sm-12">
             <label htmlFor="inputNumber" className="form-label">
@@ -339,6 +395,7 @@ const FormProducer = () => {
               type="text"
               className="form-control"
               id="inputNumber"
+              value={formData.number}
               onInput={handleOnlyNumber}
             />
           </div>
@@ -346,54 +403,69 @@ const FormProducer = () => {
             <label htmlFor="inputComplement" className="form-label">
               Bairro
             </label>
-            <input type="text" className="form-control" id="inputComplement" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputComplement"
+              value={formData.district}
+            />
           </div>
           <div className="col-lg-3 col-sm-12">
             <label htmlFor="inputComplement" className="form-label">
               Complemento
             </label>
-            <input type="text" className="form-control" id="inputComplement" />
+            <input
+              type="text"
+              className="form-control"
+              id="inputComplement"
+              value={formData.complement}
+            />
           </div>
           <div className="col-lg-3 col-sm-12">
             <label htmlFor="inputStateUF" className="form-label">
               Estado - UF
             </label>
-            <select className="form-select input" id="inputStateUF">
+            <select
+              className="form-select input"
+              id="inputStateUF"
+              value={formData.state}
+              onChange={(e) =>
+                setFormData({ ...formData, state: e.target.value })
+              }
+            >
               <option value="">Estado</option>
-              <option value="São Paulo">São Paulo</option>
-              <option value="Rio de Janeiro">Rio de Janeiro</option>
-              <option value="Minas Gerais">Minas Gerais</option>
+              {states.map((state) => (
+                <option key={state.id} value={state.uf}>
+                  {state.name} - {state.uf}
+                </option>
+              ))}
             </select>
           </div>
           <div className="col-lg-6 col-sm-12">
             <label htmlFor="inputCity" className="form-label">
               Cidade
             </label>
-            <select className="form-select input" id="inputCity">
+            <select
+              className="form-select input"
+              id="inputCity"
+              value={formData.city}
+            >
               <option value=""></option>
-              <option value="São Paulo">São Paulo</option>
-              <option value="São Pedro">São Pedro</option>
-              <option value="Blumenau">Blumenau</option>
-              <option value="Rio de Janeiro">Rio de Janeiro</option>
-              <option value="Medianeira">Medianeira</option>
-              <option value="Curitiba">Curitiba</option>
-              <option value="São Paulo">São Paulo</option>
-              <option value="São Pedro">São Pedro</option>
-              <option value="Blumenau">Blumenau</option>
-              <option value="Rio de Janeiro">Rio de Janeiro</option>
-              <option value="Medianeira">Medianeira</option>
-              <option value="Curitiba">Curitiba</option>
             </select>
           </div>
           <div className="col-12"></div>
           <div className="col-12"></div>
           <div className="col-12 check">
             <label htmlFor="autorizacao" className="form-label">
-              <input type="checkbox" id="autorizacao" /> Autorizo nos termos da
-              Resolução CMN nº 3.658 de 17.12.2008, à CAIXA a consultar as
-              informações consolidadas, relativas a minha pessoa ou à empresa e
-              seus sócios, se for o caso, constantes no Sistema de Informações
-              de Créditos (SCR) do BACEN. <br />
+              <input
+                type="checkbox"
+                id="autorizacao"
+                value={formData.isAcceptedTerm}
+              />
+              Autorizo nos termos da Resolução CMN nº 3.658 de 17.12.2008, à
+              CAIXA a consultar as informações consolidadas, relativas a minha
+              pessoa ou à empresa e seus sócios, se for o caso, constantes no
+              Sistema de Informações de Créditos (SCR) do BACEN. <br />
               Autorizo, ainda, a CAIXA a fornecer informações sobre as operações
               de crédito com ela realizadas, no sentido de compor o cadastro do
               citado sistema. Os presentes dados são verdadeiros e visam
@@ -420,7 +492,7 @@ const FormProducer = () => {
             </label>
           </div>
           <div className="col-12">
-            <button type="submit" className="btn btn-primary">
+            <button className="btn btn-primary" onClick={handleSubmit}>
               Salvar
             </button>
           </div>
