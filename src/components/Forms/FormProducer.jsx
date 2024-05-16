@@ -5,6 +5,35 @@ import "./styles/FormStyles.css";
 import CurrencyInput from "react-currency-input-field";
 
 const FormProducer = () => {
+  const [civilState, setCivilState] = useState("");
+  const [marriageRegime, setMarriageRegime] = useState("");
+  const [cpfConjuge, setCpfConjuge] = useState("");
+  const [formData, setFormData] = useState({
+    fullName: "",
+    cpf: "",
+    civilStatus: "",
+    marriageRegime: "",
+    partnerCpf: "",
+    phoneNumber: "",
+    email: "",
+    timeExperience: "",
+    invoicingPerYear: "",
+    profile: "",
+    agriculturalTechnicalAssistance: "",
+    maintenanceFamilyPerYear: "",
+    supplierDebts: "",
+    normalFundingFromOtherFinancialInstitutions: "",
+    extendFundingFromOtherFinancialInstitutions: "",
+    investmentInOtherFinancialInstitutions: "",
+    street: "",
+    number: "",
+    district: "",
+    city: "",
+    state: "",
+    complement: "",
+    isAcceptedTerm: false,
+  });
+
   const handleOnlyNumber = (e) => {
     const numericValue = e.target.value.replace(/\D/g, "");
     if (numericValue.length > 2) {
@@ -13,10 +42,6 @@ const FormProducer = () => {
       e.target.value = numericValue;
     }
   };
-
-  const [civilState, setCivilState] = useState("");
-  const [marriageRegime, setMarriageRegime] = useState("");
-  const [cpfConjuge, setCpfConjuge] = useState("");
 
   const handleCivilStateChange = (e) => {
     const selectedCivilState = e.target.value;

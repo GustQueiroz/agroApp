@@ -7,11 +7,11 @@ import "./home.css";
 
 const Home = () => {
   return (
-    <div className="screen-body">
+    <div className="home-screen-body">
       <NavigationMenu />
-      <div>
+      <div className="home-body">
         <img src={LogoDex} className="logoDexRegister" />
-        <p>Tela de Inicio</p>
+        <h3 className="home-text">Seja bem vindo ao sistema AgroProApp</h3>
       </div>
     </div>
   );
